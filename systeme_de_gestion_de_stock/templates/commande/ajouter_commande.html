@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Valider">
+
+    </form>
+</div>
+{% endblock %}
